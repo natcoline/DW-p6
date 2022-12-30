@@ -34,7 +34,7 @@ body{
 }
 
 #logo{
-    padding-left: 37px;
+    margin-left: 37px;
     width: 100%;
 }
 
@@ -264,6 +264,24 @@ h4{
     margin: 44px 331px;  
 }
 
+#form_order input[type="submit"]:hover, #form_meet input[type="submit"]:hover {
+    background-color: #df5c48;
+}
+
+
+.wpcf7-response-output{
+    background-color:
+    white;
+    color:#3B8E46;
+    border-color:white; 
+}
+
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output{
+    border-color:white;
+    background-color:  #df5c48;
+    color:white;
+}
 
 
 footer{
@@ -273,7 +291,30 @@ footer{
 	line-height: 60px;
 }
 
+#error404{
+    padding-top:100px;
+    padding-bottom: 100px;
+    background-color:#ece2da;
+    text-align: center;
+    font-size: 30px;
+}
 
+#img404{
+    margin:auto;
+    height: 40%;
+}
+
+#error404 a{
+    padding:15px 20px;
+    background-color:#E0B9B4;
+    border-radius: 5px;
+    font-size: 20px;
+    color: White;
+}
+
+#error404 a:hover{
+    background-color:#d44057;
+}
 
 @media screen and (min-width: 350px) and (max-width: 990px){
     .button-commander {
@@ -288,7 +329,7 @@ footer{
 	}
 
     #logo{
-        padding-left: 20px;
+        margin-left: 20px;
         width: 70%;
     }
 

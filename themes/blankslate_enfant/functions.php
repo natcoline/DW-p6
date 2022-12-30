@@ -59,14 +59,24 @@ add_filter('nav_menu_link_attributes', 'planty_menu_link_class');
 
 
 function add_admin_link( $items, $args ) {
-	if (is_user_logged_in() && ($args->theme_location == 'header_menu')) {
-		$items .= '<li><a href=" '. get_admin_url() .' " >Admin</a> </li>';
+	/* var_dump($args->theme_location); */
+	if (is_user_logged_in() && ($args->theme_location == 'header')) {
+		$items .= '<li class="nav-item "><a class="nav-link" href=" '. get_admin_url() .' " >Admin</a> </li>';
 	}
-
+	
 	return $items;
 }
 
 add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
 	
+/* Redirection page 404 vers l'accueil */
+/* function PlantyError404 (){
+	if (is_404()){
+		wp_redirect( home_url() );
+		exit; 
+	}
+}
+
+add_action ('template_redirect', 'PlantyError404'); */
 
 ?>
